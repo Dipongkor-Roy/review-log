@@ -11,7 +11,7 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                  src="https://dummyimage.com/302x302"
+                  src="https://images.pexels.com/photos/19759669/pexels-photo-19759669/free-photo-of-smiling-brunette-fashion-model.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 />
                 <p class="leading-relaxed">
                   Edison bulb retro cloud bread echo park, helvetica stumptown
@@ -31,7 +31,7 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                  src="https://dummyimage.com/300x300"
+                  src="https://images.pexels.com/photos/19603603/pexels-photo-19603603/free-photo-of-silhouette-of-a-person-in-a-baseball-cap-looking-up.jpeg"
                 />
                 <p class="leading-relaxed">
                   Edison bulb retro cloud bread echo park, helvetica stumptown
@@ -51,7 +51,7 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-800 bg-gray-800 bg-opacity-10"
-                  src="https://dummyimage.com/305x305"
+                  src=" https://images.pexels.com/photos/19714679/pexels-photo-19714679/free-photo-of-shopla.jpeg"
                 />
                 <p class="leading-relaxed">
                   Edison bulb retro cloud bread echo park, helvetica stumptown

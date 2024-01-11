@@ -5,7 +5,7 @@ const Header = () => {
     const {user}=useState([])
     return (
         <div>
-               <div className="navbar text-gray-400 bg-gray-900 nav m-0 px-3 ">
+               <nav className="navbar text-gray-400 bg-gray-900 nav m-0 px-3 ">
         <div className="flex-1 mr-10">
           <Link to='/' className=" normal-case text-xl hover:text-green-500">Review Log</Link>
         </div>
@@ -46,7 +46,7 @@ const Header = () => {
              </dialog>
       </ul>
       </div>
-      </div>
+      </nav>
         </div>
     );
 };

@@ -10,8 +10,7 @@ const Hero = () => {
           {/* image */}
           <div class="text-center lg:w-2/3 w-full">
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-              Microdosing synth tattooed vexillologist
-            </h1>
+            Dive into Expert Reviews and User Feedback on ReviewLog</h1>
             <p class="leading-relaxed mb-8">
               Meggings kinfolk echo park stumptown DIY, kale chips beard
               jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice
