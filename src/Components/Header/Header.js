@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     const {user}=useState([])
     return (
-        <div>
-               <nav className="navbar text-gray-400 bg-gray-900 nav m-0 px-3 ">
+        <div className=' text-gray-400 bg-gray-900 '>
+               <nav className="navbar text-gray-400 bg-gray-900 nav m-0 px-5 shadow-mdshadow-lg">
         <div className="flex-1 mr-10">
-          <Link to='/' className=" normal-case text-xl hover:text-green-500">Review Log</Link>
+          <Link to='/' className="ml-2 normal-case text-xl hover:text-green-500">Review Log</Link>
         </div>
-        <div className="flex-none">
+        <div className="flex-none mr-[14px]">
           <ul tabIndex={0} className="menu menu-horizontal px-1 pborder hidden lg:flex">
-             <li><Link to='/book'>Destination</Link></li>
+             <li><Link to='/book'>Products</Link></li>
              <li><Link>About Us</Link></li>
              <li><Link>Blog</Link></li>
           </ul>
@@ -24,7 +24,7 @@ const Header = () => {
             <Link  className="btn btn-ghost normal-case  text-cyan-600 mx-1">Log Out</Link></>
             :
             <>
-            <Link to='/logIn' className="btn btn-ghost normal-case text-white">LogIn</Link>
+            <Link to='/logIn' className="text-lg normal-case hover:text-green-500  pr-4">LogIn</Link>
             <Link to='/signUp' className="inline-flex text-white bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-600 rounded text-lg">Sign Up</Link>
             </>
           }
@@ -36,7 +36,7 @@ const Header = () => {
       <ul tabIndex={0} className=" ">
       <dialog id="my_modal_1" className="modal">
       <form method="dialog" className="modal-box text-center">
-      <li className="hover:bg-green-500 hover:text-white  my-1"><Link className="p-2" to='/book'>Destination</Link></li>
+      <li className="hover:bg-green-500 hover:text-white  my-1"><Link className="p-2" to='/book'>Products</Link></li>
              <li className="hover:bg-green-500 hover:text-white  my-1 "><Link className=" p-2">About Us</Link></li>
              <li className="hover:bg-green-500 hover:text-white  my-1"><Link className="p-2">Blog</Link></li>
              <div className="modal-action">
