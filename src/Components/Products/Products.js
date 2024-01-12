@@ -1,135 +1,30 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import CardDetails from '../CardDetails/CardDetails'
+import { Link } from "react-router-dom";
 const Products = () => {
+  const [products,setProducts]=useState([])
+  useEffect(()=>{
+    fetch("http://localhost:2000/products")
+    .then(res=>res.json())
+    .then(data=>setProducts(data))
+  },[])
   return (
     <section class="text-gray-400 bg-gray-900 body-font">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/420x260"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">
-                The Catalyzer
-              </h2>
-              <p class="mt-1">$16.00</p>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/421x261"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">
-                Shooting Stars
-              </h2>
-              <p class="mt-1">$21.15</p>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/422x262"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">Neptune</h2>
-              <p class="mt-1">$12.00</p>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/423x263"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">
-                The 400 Blows
-              </h2>
-              <p class="mt-1">$18.40</p>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/424x264"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">
-                The Catalyzer
-              </h2>
-              <p class="mt-1">$16.00</p>
-            </div>
-          </div>
-
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/427x267"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">Neptune</h2>
-              <p class="mt-1">$12.00</p>
-            </div>
-          </div>
-          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-            <p class="block relative h-48 rounded overflow-hidden">
-              <img
-                alt="ecommerce"
-                class="object-cover object-center w-full h-full block"
-                src="https://dummyimage.com/428x268"
-              />
-            </p>
-            <div class="mt-4">
-              <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
-                CATEGORY
-              </h3>
-              <h2 class="text-white title-font text-lg font-medium">
-                The 400 Blows
-              </h2>
-              <p class="mt-1">$18.40</p>
-            </div>
-          </div>
+        <div class="flex flex-wrap justify-center m-4 ">
+       {
+        products.slice(0, 3).map(product=><CardDetails
+        key={product._id}
+        product={product}
+        ></CardDetails>)
+       }
+         
         </div>
+       <div className="flex items-center justify-center mt-[55px] ">
+       <Link to='/signUp' className="inline-flex text-center text-white bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded text-md">Show More</Link>
+       </div>
       </div>
+     
     </section>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
 import Products from "../Products/Products";
 import Testimonial from "../Testimonial/Testimonial";
+import AppGetSection from "../AppGetSection/AppGetSection";
 
 const Hero = () => {
   return (
     <div>
-      <section class="text-gray-400 bg-gray-900 body-font">
+      <section class="text-gray-400 bg-gray-900 body-font ">
         <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
           {/* image */}
           <div class="text-center lg:w-2/3 w-full">
@@ -31,6 +32,7 @@ const Hero = () => {
       </section>
       <Products/>
       <Testimonial/>
+      <AppGetSection/>
     </div>
   );
 };
