@@ -11,7 +11,7 @@ const Header = () => {
         </div>
         <div className="flex-none mr-[14px]">
           <ul tabIndex={0} className="menu menu-horizontal px-1 pborder hidden lg:flex">
-             <li><Link to='/book'>Products</Link></li>
+             <li><Link to='/products'>Products</Link></li>
              <li><Link>About Us</Link></li>
              <li><Link>Blog</Link></li>
           </ul>
@@ -20,8 +20,8 @@ const Header = () => {
           {
             user?.uid?
             <>
-            <h2 className='text-cyan-600 mx-1 nameBorder'>{user?.displayName}</h2>
-            <Link  className="btn btn-ghost normal-case  text-cyan-600 mx-1">Log Out</Link></>
+            <h2 className='text-green-500 mx-1 nameBorder'>{user?.displayName}</h2>
+            <Link  className="normal-case  text-green-500 mx-1">Log Out</Link></>
             :
             <>
             <Link to='/logIn' className="text-lg normal-case hover:text-green-500  pr-4">LogIn</Link>

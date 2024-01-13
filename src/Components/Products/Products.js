@@ -23,7 +23,10 @@ const Products = () => {
      
       </div>
       <div className="flex items-center justify-center mt-0 ">
-       <Link to='/signUp' className="inline-flex text-center text-white bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded text-md">Show More</Link>
+      
+       
+       <Link to='/products' className="inline-flex text-center text-white bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded text-md">Show More</Link>
+       
        </div>
      
     </section>
