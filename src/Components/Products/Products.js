@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [products,setProducts]=useState([])
   useEffect(()=>{
-    fetch("http://localhost:2000/products")
+    fetch("https://review-log-server-h0qlerk6t-dipongkor-roy.vercel.app/products")
     .then(res=>res.json())
     .then(data=>setProducts(data))
   },[])

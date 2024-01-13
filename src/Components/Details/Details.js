@@ -5,6 +5,8 @@ import Comment from '../Comment/Comment';
 const Details = () => {
     const product=useLoaderData();
     const {name,image,_id,price,description}=product;
+   
+    
     return (
         <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
@@ -87,7 +89,7 @@ const Details = () => {
       </div>
     </div>
   </div>
-  <Comment/>
+  <Comment ></Comment>
 </section>
     );
 };

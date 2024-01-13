@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
         {
          path:"/products/:id",
          element:<Details/>,
-         loader:({params})=> fetch(`http://localhost:2000/products/${params.id}`)
+         loader:({params})=> fetch(`https://review-log-server-h0qlerk6t-dipongkor-roy.vercel.app/products/${params.id}`)
         },
         {
           path:'/signup',
