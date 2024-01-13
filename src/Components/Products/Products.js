@@ -9,7 +9,7 @@ const Products = () => {
     .then(data=>setProducts(data))
   },[])
   return (
-    <section class="text-gray-400 bg-gray-900 body-font">
+    <section class="text-gray-400 bg-gray-900 body-font pb-5">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap justify-center m-4 ">
        {
@@ -20,10 +20,11 @@ const Products = () => {
        }
          
         </div>
-       <div className="flex items-center justify-center mt-[55px] ">
+     
+      </div>
+      <div className="flex items-center justify-center mt-0 ">
        <Link to='/signUp' className="inline-flex text-center text-white bg-green-500 border-0 py-1 px-2 focus:outline-none hover:bg-green-600 rounded text-md">Show More</Link>
        </div>
-      </div>
      
     </section>
   );
